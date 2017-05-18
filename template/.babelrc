@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["target", {
+      "presets": ["es2015"],
+      "targets": [
+        {"name": "ios", "version": 7}
+      ]
+    }]
+  ]
+}
