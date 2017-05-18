@@ -1,4 +1,4 @@
-#Vue2.x boilerplate for Phoenix
+# Vue2.x boilerplate for Phoenix
 
 > Vue2.x+Webpack2 setup for [Phoenix](http://www.phoenixframework.org/)
 > If you want a standalone Vue+Webpack check [Webpack](https://github.com/vuejs-templates/webpack)
@@ -33,5 +33,8 @@ $ mix phoenix.server
 - [vue-resource](https://github.com/pagekit/vue-resource) So you can make http requests
 - [vue-router](https://github.com/vuejs/vue-router)
 
+## Useful links
 
-
+- [Webpack Docs](https://webpack.js.org/configuration/)
+- [Vue](https://vuejs.org/v2/guide/)
+- [Phoenix](http://www.phoenixframework.org/docs/overview)
