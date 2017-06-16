@@ -4,9 +4,9 @@ var utils = require('./utils');
 var path = require('path');
 
 module.exports = {
-  entry: "./web/static/js/app.js",
+  entry: "./static/js/app.js",
   output: {
-    path: path.resolve("./priv/static/js"),
+    path: path.resolve("../priv/static/js"),
     filename: "app.js"
   },
   module: {
@@ -46,14 +46,14 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.vue', '.json'],
-    modules: [ "node_modules", __dirname + "/web/static/js" ],
+    modules: [ "node_modules", __dirname + "/static/js" ],
     alias: {
       vue: 'vue/dist/vue.js'
     }
   },
   plugins: [
     new ExtractTextPlugin("../css/app.css"),
-    new CopyWebpackPlugin([{from: "./web/static/assets", to: "../"}])
+    new CopyWebpackPlugin([{from: "./static/assets", to: "../"}])
   ]
 
 }

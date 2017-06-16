@@ -17,7 +17,7 @@ $ yarn install
 ```
 You still have to manually change a line in your `config/dev.exs` to get it to work
 ``` elixir
-watchers: [npm: ["run", "watch"]]
+watchers: [npm: ["run", "watch", "--prefix", "assets"]]
 ```
 And then finally:
 ``` bash
