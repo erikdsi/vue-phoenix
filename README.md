@@ -45,7 +45,7 @@ end
 And then finally:
 ``` bash
 $ mix ecto.create
-$ mix phoenix.server
+$ mix phx.server
 ```
 
 ## What's Included
