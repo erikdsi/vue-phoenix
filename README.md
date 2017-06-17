@@ -5,11 +5,10 @@
 
 ## Usage
 
-
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use [yarn](https://yarnpkg.com/en/) or npm 3+ for a more efficient dependency tree.**
 
 ``` bash
-$ mix phoenix.new my-project --no-brunch
+$ mix phx.new my_project --no-brunch
 $ yarn global add vue-cli
 $ vue init erikdsi/vue-phoenix my-project
 $ cd my-project/assets
