@@ -1,5 +1,6 @@
 # Vue2.x boilerplate for Phoenix
 
+> [Phoenix 1.3-rc Template](https://github.com/erikdsi/vue-phoenix/tree/1.3rc)
 > Vue2.x+Webpack2 setup for [Phoenix](http://www.phoenixframework.org/)
 > If you want a standalone Vue+Webpack check [Webpack](https://github.com/vuejs-templates/webpack)
 
