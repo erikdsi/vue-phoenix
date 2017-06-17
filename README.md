@@ -1,4 +1,4 @@
-# Vue2.x boilerplate for Phoenix
+# Vue2.x boilerplate for Phoenix 1.3-rc
 
 > Vue2.x+Webpack2 setup for [Phoenix](http://www.phoenixframework.org/)
 > If you want a standalone Vue+Webpack check [Webpack](https://github.com/vuejs-templates/webpack)
@@ -12,15 +12,40 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 $ mix phoenix.new my-project --no-brunch
 $ yarn global add vue-cli
 $ vue init erikdsi/vue-phoenix my-project
-$ cd my-project
+$ cd my-project/assets
 $ yarn install
 ```
-You still have to manually change a line in your `config/dev.exs` to get it to work
+Add the watcher command in your `config/dev.exs`
 ``` elixir
 watchers: [npm: ["run", "watch", "--prefix", "assets"]]
 ```
+
+Setup your `app.html.eex` and/or `index.html.eex`:
+
+``` html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>
+```
+
+Setup your PageController
+
+``` elixir
+def index(conn, _params) do
+  render conn, "app.html"
+end
+```
+
 And then finally:
 ``` bash
+$ mix ecto.create
 $ mix phoenix.server
 ```
 
