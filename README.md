@@ -10,7 +10,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 ``` bash
 $ mix phx.new my_project --no-brunch
 $ yarn global add vue-cli
-$ vue init erikdsi/vue-phoenix my-project
+$ vue init erikdsi/vue-phoenix#1.3rc my-project
 $ cd my-project/assets
 $ yarn install
 ```
