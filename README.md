@@ -1,6 +1,6 @@
-# Vue2.x boilerplate for Phoenix
+# Vue2.x boilerplate for Phoenix !.2
 
-> [Phoenix 1.3-rc Template](https://github.com/erikdsi/vue-phoenix/tree/1.3rc)
+> [Phoenix 1.3 Template](https://github.com/erikdsi/vue-phoenix)
 
 > Vue2.x+Webpack2 setup for [Phoenix](http://www.phoenixframework.org/)
 
@@ -14,7 +14,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 ``` bash
 $ mix phoenix.new my-project --no-brunch
 $ yarn global add vue-cli
-$ vue init erikdsi/vue-phoenix my-project
+$ vue init erikdsi/vue-phoenix#1.2 my-project
 $ cd my-project
 $ yarn install
 ```
