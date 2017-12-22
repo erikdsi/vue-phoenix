@@ -1,4 +1,4 @@
-# Vue2.x boilerplate for Phoenix
+# Vue2.x boilerplate for Phoenix 1.3-rc
 
 > [Phoenix 1.3-rc Template](https://github.com/erikdsi/vue-phoenix/tree/1.3rc)
 
@@ -8,23 +8,47 @@
 
 ## Usage
 
-
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use [yarn](https://yarnpkg.com/en/) or npm 3+ for a more efficient dependency tree.**
 
 ``` bash
-$ mix phoenix.new my-project --no-brunch
+$ mix phx.new my_project --no-brunch
 $ yarn global add vue-cli
-$ vue init erikdsi/vue-phoenix my-project
-$ cd my-project
+$ vue init erikdsi/vue-phoenix#1.3rc my-project
+$ cd my-project/assets
 $ yarn install
 ```
-You still have to manually change a line in your `config/dev.exs` to get it to work
+Add the watcher command in your `config/dev.exs`
 ``` elixir
-watchers: [npm: ["run", "watch"]]
+watchers: [npm: ["run", "watch", "--prefix", "assets"]]
 ```
+
+Setup your `app.html.eex` and/or `index.html.eex`:
+
+``` html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>
+```
+
+Setup your PageController
+
+``` elixir
+def index(conn, _params) do
+  render conn, "app.html"
+end
+```
+
 And then finally:
 ``` bash
-$ mix phoenix.server
+$ mix ecto.create
+$ mix phx.server
 ```
 
 ## What's Included
