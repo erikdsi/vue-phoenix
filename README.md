@@ -1,4 +1,4 @@
-# Vue2.x boilerplate for Phoenix !.2
+# Vue2.x boilerplate for Phoenix 1.2
 
 > [Phoenix 1.3 Template](https://github.com/erikdsi/vue-phoenix)
 
